@@ -10,6 +10,11 @@ function App() {
   
   useEffect(() => {
     console.log("this mounted")
+    const getData = async () => {
+      const data = await fetch("/api/v1")
+      console.log(data, "this is the mounted data")
+    }
+    getData()
   })
 
   
