@@ -3,6 +3,7 @@ require("dotenv").config()
 const express = require("express")
 const path = require("path")
 const app = express()
+const fetch = require("node-fetch");
 const methodOverride = require("method-override")
 const bodyParser = require("body-parser")
 const session = require("express-session")
@@ -22,6 +23,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 //API CALLS
 app.get("/api/v1/", async (req, res) => {
     try{
+        const data = await (await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${key}`)).json()
+        console.log(data, "this is the data")
         console.log("this hit")
         res.json("hello")
     }
