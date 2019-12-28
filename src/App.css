@@ -33,6 +33,11 @@ html, body{
   font-weight: bold;
 }
 
+.category:hover{
+  background-image: url("./images/space.jpg");
+  background-size: cover;
+}
+
 .container{
   text-align: center;
 }
