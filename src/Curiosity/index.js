@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { withRouter, Link } from 'react-router-dom'
 
-function Home() {
+function Curiosity() {
     const [test, setTest] = useState(false)
   
     useEffect(() => {
@@ -15,7 +15,7 @@ function Home() {
     return(
         <div>
             <div className="header">
-                Get Ready To Learn About Space!
+                Get Ready To Learn About Space!!
             </div>
             <div className="description">
                 CosmoCards is here to help you learn about all things space. Pick one of the categories below to start going through flashcards!
@@ -49,4 +49,4 @@ function Home() {
     )
 }
 
-export default withRouter(Home)
+export default withRouter(Curiosity)
