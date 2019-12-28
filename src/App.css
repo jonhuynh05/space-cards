@@ -8,6 +8,8 @@ html, body{
 
 .header{
     font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
 }
 
 .description{
@@ -28,4 +30,18 @@ html, body{
   margin: 30px;
   text-align: center;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.container{
+  text-align: center;
+}
+
+.description{
+  margin: 20px;
+}
+
+.select{
+  margin: 20px;
+  font-weight: bold;
 }
