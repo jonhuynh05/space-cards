@@ -13,7 +13,8 @@ function Curiosity() {
       }
       getData()
       setIsLoading(false)
-    })
+    },
+    [])
     return(
         <div className="container">
             this is curiosity
