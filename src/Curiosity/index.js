@@ -13,12 +13,15 @@ function Curiosity() {
       }
       getData()
       setIsLoading(false)
-    },
-    [])
+    })
     return(
         <div className="container">
-            <MoonLoader />
             this is curiosity
+            <MoonLoader
+                size={"50px"}
+                color={"rgb(138, 138, 255)"}
+                loading={isLoading}
+            />
         </div>
     )
 }
