@@ -26,7 +26,7 @@ app.get("/api/v1/", async (req, res) => {
         const data = await (await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${key}`)).json()
         console.log(data, "this is the data")
         console.log("this hit")
-        res.json("hello")
+        res.send(data)
     }
     catch(err){
         console.log(err)

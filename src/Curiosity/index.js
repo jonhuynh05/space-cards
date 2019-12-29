@@ -5,16 +5,19 @@ import {MoonLoader} from "react-spinners"
 function Curiosity() {
     const [isLoading, setIsLoading] = useState(true)
   
+    const getData = async () => {
+        const data = await(await fetch("/api/v1")).json()
+        console.log(data, "this is the mounted data")
+    }
+
     useEffect(() => {
       console.log("this mounted")
-      const getData = async () => {
-        const data = await fetch("/api/v1")
-        console.log(data, "this is the mounted data")
-      }
+      setIsLoading(true)
       getData()
       setIsLoading(false)
     },
     [])
+
     return(
         <div className="container">
             this is curiosity
