@@ -6,15 +6,15 @@ function Curiosity() {
     const [isLoading, setIsLoading] = useState(true)
   
     const getData = async () => {
+        setIsLoading(true)
         const data = await(await fetch("/api/v1")).json()
         console.log(data, "this is the mounted data")
+        setIsLoading(false)
     }
 
     useEffect(() => {
       console.log("this mounted")
-      setIsLoading(true)
       getData()
-      setIsLoading(false)
     },
     [])
 
