@@ -1,0 +1,12 @@
+.curiosity-image {
+    max-width: 200px;
+}
+
+#images-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images-row{
+    margin: 20px;
+}
